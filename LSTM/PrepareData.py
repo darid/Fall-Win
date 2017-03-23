@@ -42,30 +42,47 @@ def importData(filename):
     # print im_data[0:(75*80)],im_lable,len(im_data)
 
     # return im_data[0:(75*80)],im_lable
-    CleanData.clean(im_data)
-    for n in range(0,int(len(im_data)/75)-2):
-        v1 = im_data[n*75:(n+1)*75]
-        v2 = im_data[(n+1)*75:(n+2)*75]
-        v = list(map(lambda x, y: (x - y)**2, v2, v1)) #calculate the speed of skeleton by Tao
-        # print (v,"\n", len(v),"\n")
-        ###
-        com = CalCoM.CalCom(v1)
-        # print(com)
-        # ac_data.extend(com)
+    # CleanData.clean(im_data)
+    # print (im_data)
+    # for n in range(0, int(len(im_data)/75) - 2):
+    #     v1 = im_data[n * 75:(n + 1) * 75]
+    #     v2 = im_data[(n + 1) * 75:(n + 2) * 75]
+    #     v = list(map(lambda x, y: x - y, v2, v1))
+    #     ac_data.extend(v)
 
-        for m in range(0,int(len(v)/3)):
-            v_d = v[m*3]+v[m*3+1]+v[m*3+2]
-            ac_data.append(v_d)
-        ac_data.extend(com)
+    # for n in range(0,int(len(im_data)/75)-2):
+    #     v1 = im_data[n*75:(n+1)*75]
+    #     v2 = im_data[(n+1)*75:(n+2)*75]
+    #     v = list(map(lambda x, y: (x - y)**2, v2, v1)) #calculate the speed of skeleton by Tao
+    #     # print (v,"\n", len(v),"\n")
+    #     ###
+    #     # speed of com
+    #     com_V1 = CalCoM.CalCom(v1)
+    #     com_v2 = CalCoM.CalCom(v2)
+    #     com_v = list(map(lambda x, y: (x - y)**2, v2, v1))
+    #     for m in range(0,int(len(com_v)/3)):
+    #         com_d = np.sqrt(v[m*3]+v[m*3+1]+v[m*3+2])
+    #         ac_data.append(com_d)
+    #
+    #     # raw skeletonal position data
+    #     # ac_data.extend(v1)
+    #
+    #     # speed of skeleton data
+    #     for m in range(0,int(len(v)/3)):
+    #         v_d = np.sqrt(v[m*3]+v[m*3+1]+v[m*3+2])
+    #         ac_data.append(v_d)
+
+
+
         # print (len(ac_data),ac_data)
 
-    # print len(ac_data), 182*25
-    return ac_data[0:(34*60)],im_lable
+    # print (ac_data)
+    return im_data[0:(75*75)],im_lable
         ###
 
         # ac_data.extend(v)
     # return ac_data
     # return ac_data[0:(75*60)],im_lable
 
-print(importData("D:\\PycharmProjects\\ResearchWork\\Data\\Data7Fallside2.txt"))
+# print(importData("D:\\PycharmProjects\\ResearchWork\\Data\\Data7Fallside2.txt"))
 

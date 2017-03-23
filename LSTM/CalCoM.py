@@ -103,7 +103,14 @@ def CalCom(sourceList):
             0.142 * zHipCom + 0.1 * (zLeftThighCom + zRShankCom) + 0.0465 * (zLeftShankCom + zRShankCom) + \
             0.0145 * (zLeftFootCom + zRFootCom)
 
-    arrayCom = [xCom,yCom,zCom,xRThighCom,yRThighCom,zRThighCom,xLeftShankCom,yLeftFootCom, zLeftFootCom]
+    arrayCom = [xCom,yCom,zCom,
+                xRThighCom,yRThighCom,zRThighCom,
+                xLeftThighCom,yLeftThighCom,zLeftThighCom,
+                xRShankCom,yRShankCom,zRShankCom,
+                xLeftShankCom,yLeftFootCom, zLeftFootCom,
+                xRArmCom,yRArmCom,zRArmCom,
+                xLeftArmCom,yLeftArmCom,zLeftArmCom
+                ]
     # arrayCom.append[xCom]
     # arrayCom.append[yCom]
     # arrayCom.append[zCom]
